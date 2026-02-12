@@ -189,9 +189,8 @@ def main_menu():
         
         print(f"{RED}[1] {WHITE}funções")
         print(f"{RED}[2] {WHITE}Editar Token")
-        print(f"{RED}[3] {WHITE}Editar Mensagem")
-        print(f"{RED}[4] {WHITE}Informações")
-        print(f"{RED}[5] {WHITE}Sair")
+        print(f"{RED}[3] {WHITE}Informações")
+        print(f"{RED}[4] {WHITE}Sair")
         
         opt = input(f"\n{RED}Opção: {RESET}")
         
@@ -215,21 +214,12 @@ def main_menu():
             
         elif opt == "3":
             clear_screen(); print_gradient_ascii()
-            print(f"{WHITE}Digite a nova Mensagem ou aperte ENTER para cancelar.{RESET}")
-            new_m = input("Mensagem: ").strip()
-            if new_m:
-                cfg["message"] = new_m
-                save_config(cfg)
-                print(f"\n{RED}[+] Mensagem salva!{RESET}"); time.sleep(1)
-            else: print(f"\n{RED}[!] Operação cancelada.{RESET}"); time.sleep(1)
-            
-        elif opt == "4":
-            clear_screen(); print_gradient_ascii()
-            print(f"{RED}--- INFORMAÇÕES ---\n\nCriador: Y6\nCanal Fixo: {FIXED_CHANNEL_NAME}\nVersão: 1.0{RESET}")
+            print(f"{RED}--- INFORMAÇÕES ---\n\ntik tok:jhon__300\nCanal Fixo: {FIXED_CHANNEL_NAME}\nVersão: 1.0{RESET}")
             wait_enter()
             
-        elif opt == "5":
+        elif opt == "4":
             sys.exit()
 
 if __name__ == "__main__":
     main_menu()
+                                 
