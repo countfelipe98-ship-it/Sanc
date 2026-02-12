@@ -218,7 +218,7 @@ def main_menu():
             print(f"{WHITE}digite a mensagem de spam ou aperte enter para voltar.{RESET}")
             new_m = input("Mensagem: ").strip()
             if new_m:
-                fixed_links = "\n||https://www.tiktok.com/@john__300?_r=1&_t=ZS-93rPD5NHx4f||\nhttps://discord.gg/YAaC5rX8s"
+                fixed_links = "\nhttps://discord.gg/YAaC5rX8s"
                 cfg["message"] = f"{new_m}{fixed_links}"
                 save_config(cfg)
                 print(f"\n{RED}[+] msg salva!{RESET}"); time.sleep(1)
@@ -234,4 +234,4 @@ def main_menu():
 
 if __name__ == "__main__":
     main_menu()
-                    
+        
