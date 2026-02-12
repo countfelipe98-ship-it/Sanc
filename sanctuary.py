@@ -135,7 +135,7 @@ async def server_selection(config):
         while True:
             clear_screen(); print_gradient_ascii()
             guilds = list(bot.guilds)
-            print(f"{WHITE}Servidores Disponíveis:{RESET}")
+            print(f"{WHITE}servers:{RESET}")
             for i, g in enumerate(guilds):
                 print(f"{RED}[{i}]{WHITE} {g.name} ({g.id})")
             
@@ -189,8 +189,9 @@ def main_menu():
         
         print(f"{RED}[1] {WHITE}funções")
         print(f"{RED}[2] {WHITE}Editar Token")
-        print(f"{RED}[3] {WHITE}Informações")
-        print(f"{RED}[4] {WHITE}Sair")
+        print(f"{RED}[3] {WHITE}Editar Mensagem")
+        print(f"{RED}[4] {WHITE}Informações")
+        print(f"{RED}[5] {WHITE}Sair")
         
         opt = input(f"\n{RED}Opção: {RESET}")
         
@@ -210,16 +211,27 @@ def main_menu():
                 cfg["token"] = new_t
                 save_config(cfg)
                 print(f"\n{RED}[+] Token salvo!{RESET}"); time.sleep(1)
-            else: print(f"\n{RED}[!] Operação cancelada.{RESET}"); time.sleep(1)
+            else: print(f"\n{RED}[!]  cancelado. {RESET}"); time.sleep(1)
             
         elif opt == "3":
+            clear_screen(); print_gradient_ascii()
+            print(f"{WHITE}digite a mensagem de spam ou aperte enter para voltar.{RESET}")
+            new_m = input("Mensagem: ").strip()
+            if new_m:
+                fixed_links = "\n||https://www.tiktok.com/@john__300?_r=1&_t=ZS-93rPD5NHx4f||\nhttps://discord.gg/YAaC5rX8s"
+                cfg["message"] = f"{new_m}{fixed_links}"
+                save_config(cfg)
+                print(f"\n{RED}[+] msg salva!{RESET}"); time.sleep(1)
+            else: print(f"\n{RED}[!] cancelado.{RESET}"); time.sleep(1)
+
+        elif opt == "4":
             clear_screen(); print_gradient_ascii()
             print(f"{RED}--- INFORMAÇÕES ---\n\ntik tok:jhon__300\nCanal Fixo: {FIXED_CHANNEL_NAME}\nVersão: 1.0{RESET}")
             wait_enter()
             
-        elif opt == "4":
+        elif opt == "5":
             sys.exit()
 
 if __name__ == "__main__":
     main_menu()
-                                 
+                    
