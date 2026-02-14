@@ -10,7 +10,7 @@ Para rodar o painel, copie e cole a sequência de comandos abaixo no seu termina
  * Clone o repositório oficial:
    git clone https://github.com/countfelipe98-ship-it/Sanc_
  * Acesse a pasta e instale as dependências:
-   cd Sanc_ && pip install discord.py asyncio
+   cd Sanc && pip install discord.py asyncio
  * Inicie o painel:
    python sanctuary.py
    
